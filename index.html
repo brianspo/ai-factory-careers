@@ -225,9 +225,9 @@ html { scroll-behavior: smooth; }
           <h2 style="margin-top:10px">Campus-owned AI compute, built for Learn by Doing</h2>
         </div>
         <div class="prose">
-          <p>In November 2025, Cal Poly announced the AI Factory: a $3 million investment by the Noyce School of Applied Computing in four NVIDIA DGX B200 systems, high-performance storage and networking, and the NVIDIA AI software stack. The Noyce School, created by a $60 million gift from the Robert N. Noyce Trust, brings together Computer Science and Software Engineering, Electrical Engineering and Computer Engineering in the College of Engineering, with Statistics as an affiliate.</p>
-          <p>The system lets students and faculty build and train models on campus instead of renting cloud GPUs by the hour. Cal Poly keeps full ownership of the data, models and applications built on it. Early work includes agriculture research, energy and transportation, environmental monitoring and large-scale image and video analysis, and regional partners on the Central Coast can use it by working with Cal Poly faculty and students.</p>
-          <p>Faculty are already using it, and classes and research groups are lining up behind them. These three positions form a new Academic and Research Computing team that keeps the platform running and puts it in front of the people who need it.</p>
+          <p>In November 2025, Cal Poly announced the AI Factory: a $3 million investment by the Noyce School of Applied Computing in four NVIDIA DGX B200 systems, high-performance storage and networking, and the NVIDIA AI software stack. The Noyce School was created by a $60 million gift from the Robert N. Noyce Trust. It brings together Computer Science and Software Engineering with Electrical Engineering and Computer Engineering in the College of Engineering, and Statistics is an affiliate.</p>
+          <p>Students and faculty can build and train models on campus instead of renting cloud GPUs by the hour, and Cal Poly keeps ownership of the data, models and applications. Early projects cover agriculture, energy and transportation, environmental monitoring, and large-scale image and video analysis. Regional partners on the Central Coast can use it too, by working with Cal Poly faculty and students.</p>
+          <p>Faculty are already using it, and classes and research groups are lining up behind them. The three people we hire will form a new team, Academic and Research Computing, that keeps the platform running and gets it in front of the people who need it.</p>
         </div>
       </div>
       <div class="facts">
@@ -243,11 +243,11 @@ html { scroll-behavior: smooth; }
     <div class="wrap">
       <p class="eyebrow">The team</p>
       <h2 style="margin-top:10px">Three roles, one small team</h2>
-      <p class="prose" style="margin-top:16px">Each role covers a different layer. The facilitator is the front door for faculty and students, the systems administrator owns the platform, and the software engineer builds the workflows that run on it. All three work closely with Noyce School faculty and with Cal Poly's existing systems and software engineering teams, so nobody is working alone.</p>
+      <p class="prose" style="margin-top:16px">Each role covers a different layer. The facilitator is the front door for faculty and students. The systems administrator owns the platform. The software engineer builds the workflows that run on it. All three work closely with Noyce School faculty and with Cal Poly's existing systems and software engineering teams, so nobody is working alone.</p>
       <div class="team">
         <a href="#facilitator"><span class="tag">People &amp; strategy</span><h3>Research Computing Facilitator Lead</h3><p>Helps researchers pick the right resource, teaches, and leads the team's day-to-day work.</p></a>
-        <a href="#sysadmin"><span class="tag">Platform</span><h3>Academic and Research Systems Administrator</h3><p>Runs the BasePOD, storage, schedulers and the AWS side of research computing.</p></a>
-        <a href="#engineer"><span class="tag">Software</span><h3>Software Engineer, AI Systems and GPU Workloads</h3><p>Builds training, fine-tuning and inference workflows that make the GPUs useful.</p></a>
+        <a href="#sysadmin"><span class="tag">Platform</span><h3>Academic and Research Systems Administrator</h3><p>Runs the BasePOD, storage and schedulers, with some AWS work as needs grow.</p></a>
+        <a href="#engineer"><span class="tag">Software</span><h3>Software Engineer, AI Systems and GPU Workloads</h3><p>Builds the training, fine-tuning and inference software that makes the GPUs useful.</p></a>
       </div>
     </div>
   </section>
@@ -284,8 +284,8 @@ html { scroll-behavior: smooth; }
           <h4 style="margin-top:20px">Nice to have</h4>
           <ul>
             <li>Master's or PhD in a computationally enabled discipline</li>
-            <li>Carpentries instructor certification or workshop and bootcamp experience</li>
-            <li>Experience supporting non-traditional users in the life sciences, social sciences or humanities</li>
+            <li><a href="https://carpentries.org/" target="_blank" rel="noopener">Carpentries</a> instructor certification or workshop and bootcamp experience</li>
+            <li>Experience helping researchers who are new to computing, in fields like the life sciences, social sciences or humanities</li>
           </ul>
         </div>
       </div>
@@ -299,8 +299,8 @@ html { scroll-behavior: smooth; }
       <div class="role-head">
         <p class="eyebrow">Role 2 of 3</p>
         <h2>Academic and Research Systems Administrator</h2>
-        <div class="meta"><span class="chip">On-prem + AWS</span><span class="chip">Platform owner</span></div>
-        <p>You'll own day-to-day technical operations of the AI Factory and the wider research and instructional Linux environment, on campus and in AWS. That means design, deployment, security and the steady work of keeping a shared GPU platform healthy as more people use it.</p>
+        <div class="meta"><span class="chip">On-prem first</span><span class="chip">Platform owner</span></div>
+        <p>You'll own day-to-day technical operations of the AI Factory and the wider research and instructional Linux environment, on campus first. That covers design, deployment, security and the steady work of keeping a shared GPU platform healthy as more people use it.</p>
       </div>
       <div class="role-body">
         <div>
@@ -308,10 +308,10 @@ html { scroll-behavior: smooth; }
           <ul>
             <li>Administer the DGX B200 BasePOD: compute, GPUs, high-speed network and VAST storage</li>
             <li>Run GPU-enabled Kubernetes (GPU Operator, MIG, time-slicing) and Slurm scheduling</li>
-            <li>Build and operate hybrid research computing in AWS with cost and security controls</li>
             <li>Automate with Ansible and Terraform; build monitoring with Prometheus and Grafana</li>
             <li>Apply CSU and Cal Poly security policy, SSO and MFA integration</li>
             <li>Mentor student employees and represent Cal Poly in CSU and national forums</li>
+            <li>Build and operate hybrid research computing in AWS with cost and security controls</li>
           </ul>
         </div>
         <div>
@@ -319,9 +319,9 @@ html { scroll-behavior: smooth; }
           <ul>
             <li>Bachelor's degree in a computing field (or equivalent) and 5 years of progressive Linux administration</li>
             <li>Production Kubernetes experience, including GPU scheduling and multi-tenant operations</li>
-            <li>Production AWS experience (IAM, VPC, EKS, ParallelCluster, FSx or equivalents)</li>
             <li>The NVIDIA GPU stack (CUDA, NCCL, drivers) and InfiniBand or RoCE networking</li>
             <li>Infrastructure as code, Python and Bash, Git-based CI/CD</li>
+            <li>Production AWS experience (IAM, VPC, EKS, ParallelCluster, FSx or equivalents)</li>
           </ul>
           <h4 style="margin-top:20px">Nice to have</h4>
           <ul>
@@ -331,7 +331,7 @@ html { scroll-behavior: smooth; }
           </ul>
         </div>
       </div>
-      <p class="stack"><b>Tools you'll see:</b> RHEL, Rocky, Ubuntu, Slurm, Kubernetes, Helm, Run:ai, JupyterHub, VAST Data, AWS, Ansible, Terraform, Prometheus, Grafana, Loki</p>
+      <p class="stack"><b>Tools you'll see:</b> RHEL, Rocky, Ubuntu, Slurm, Kubernetes, Helm, Run:ai, JupyterHub, VAST Data, Ansible, Terraform, Prometheus, Grafana, Loki, AWS</p>
       <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
     </div>
   </section>
@@ -342,7 +342,7 @@ html { scroll-behavior: smooth; }
         <p class="eyebrow">Role 3 of 3</p>
         <h2>Software Engineer, AI Systems and GPU Workloads</h2>
         <div class="meta"><span class="chip">Software first</span><span class="chip">Multi-GPU</span></div>
-        <p>This is a software role, not an infrastructure role. You'll write the tools and workflows that let faculty and students train, fine-tune and deploy models across many GPUs, and you'll help them make their own code faster and more reproducible.</p>
+        <p>This role is primarily focused on the software stack and less on infrastructure. You'll write the tools and workflows that let faculty and students train, fine-tune and deploy models across many GPUs, and you'll help them make their own code faster and more reproducible. You'll work closely with the systems administrator, and the line between the two roles will blur at times.</p>
       </div>
       <div class="role-body">
         <div>
@@ -386,9 +386,9 @@ html { scroll-behavior: smooth; }
           <h2 style="margin-top:10px">A new platform and a team you get to shape</h2>
         </div>
         <div class="prose">
-          <p>Most research computing jobs inherit a cluster and a backlog. This one starts with current-generation hardware, faculty who already want to use it, and a team that doesn't exist yet. The first people hired will decide how the service works: how researchers get access, how classes share GPUs, what the documentation looks like and what we build next.</p>
-          <p>You'll also work with students. Cal Poly's Learn by Doing approach means student employees and student researchers are part of the work, and all three roles include mentoring them.</p>
-          <p>And you'll do it in San Luis Obispo, on California's Central Coast, at a university where the system's energy use is tracked against a campus solar farm.</p>
+          <p>Cal Poly now has a brand-new HPC resource, and it's the most capable in the CSU. The first three people hired will enable faculty research, connect classes to advanced computing, and create the foundation for everything that comes next.</p>
+          <p>Students are part of the work here. Learn by Doing means student employees and student researchers will be working alongside you, and all three roles include mentoring them.</p>
+          <p>It's all in San Luis Obispo, on California's Central Coast, at one of the nation's premier polytechnic universities.</p>
         </div>
       </div>
     </div>
@@ -409,13 +409,13 @@ html { scroll-behavior: smooth; }
       <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener"><span>Academic and Research Systems Administrator</span><small>View posting &rarr;</small></a>
       <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener"><span>Software Engineer, AI Systems and GPU Workloads</span><small>View posting &rarr;</small></a>
     </div>
-    <p class="note">Questions about the program? Reach out to Brian Spolarich, AVP and CTO of Cal Poly Information Technology Services, on LinkedIn. The official job postings are the authoritative source for duties, qualifications, salary and deadlines.</p>
+    <p class="note">Questions about the program? Reach out to <a href="https://www.linkedin.com/in/briansp/" target="_blank" rel="noopener">Brian Spolarich</a>, AVP and CTO of Cal Poly Information Technology Services, on LinkedIn. The official job postings are the authoritative source for duties, qualifications, salary and deadlines.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>Cal Poly &middot; Noyce School of Applied Computing</span>
+    <span><a href="https://www.calpoly.edu/">Cal Poly</a> &middot; <a href="https://noyce.calpoly.edu/">Noyce School of Applied Computing</a> + <a href="https://tech.calpoly.edu/">Information Technology Services</a></span>
     <span>Cal Poly is an Equal Opportunity employer.</span>
   </div>
 </footer>
