@@ -182,6 +182,34 @@ footer .wrap { padding-block: 32px; font-size: 0.88rem; color: var(--muted); dis
 :root[data-theme="dark"] .sitebar { background: #134030; } :root[data-theme="dark"] .sitebar .sitename, :root[data-theme="dark"] .sitebar nav a { color: #eef3ef; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Hero photo + program diagram */
+.hero-photo { margin: 0; min-width: 0; }
+.hero-photo img { display: block; width: 100%; height: auto; border: 1px solid #3f7a63; border-bottom: 4px solid var(--gold); border-radius: 2px; }
+.hero-photo figcaption { margin-top: 10px; font-size: 0.85rem; color: var(--hero-muted); letter-spacing: 0.04em; }
+.program-extra { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: start; margin-top: 40px; }
+.program-extra .facts { grid-template-columns: 1fr 1fr; margin-top: 0; gap: 8px 0; }
+.program-extra .fact { padding-bottom: 12px; }
+.program-extra .pod { background: var(--hero-bg); border-radius: 2px; }
+@media (max-width: 860px) { .program-extra { grid-template-columns: 1fr; } }
+
+/* Hero v2: headline + copy side by side, photo full width below */
+.hero .wrap { grid-template-columns: 1fr; gap: clamp(28px, 4vw, 48px); align-items: stretch; }
+.hero-top { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: end; }
+.hero-top > * { min-width: 0; }
+.hero h1 { font-size: clamp(3rem, 7vw, 5.6rem); }
+.hero .lede { margin-top: 0; }
+.hero-photo img { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 52%; }
+@media (max-width: 860px) { .hero-top { grid-template-columns: 1fr; align-items: start; } .hero-photo img { aspect-ratio: 16 / 9; } }
+
+/* Hero v3: compact headline, full uncropped photo */
+.hero .wrap { padding-block: clamp(36px, 5vw, 56px); gap: clamp(24px, 3vw, 36px); }
+.hero-top { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+.hero h1 { font-size: clamp(2.3rem, 4.9vw, 3.8rem); margin-top: 20px; }
+.hero-copy { display: grid; grid-template-columns: minmax(0, 1.5fr) auto; gap: 20px clamp(24px, 4vw, 56px); align-items: end; }
+.hero-copy .cta-row { margin-top: 0; }
+.hero-photo img { aspect-ratio: auto; object-fit: fill; }
+@media (max-width: 860px) { .hero-copy { grid-template-columns: 1fr; } .hero-photo img { aspect-ratio: auto; } }
 </style>
 </head>
 <body>
@@ -189,30 +217,23 @@ html { scroll-behavior: smooth; }
 <div class="sitebar"><div class="wrap"><a class="sitename" href="#top">AI Factory Careers</a><nav aria-label="Page sections"><a href="#program">Program</a><a href="#roles">Roles</a><a href="#why">Why Cal Poly</a><a href="#apply">Apply</a></nav></div></div>
 <header class="hero" id="top">
   <div class="wrap">
-    <div>
-      <p class="eyebrow">Cal Poly &middot; NVIDIA DGX B200 AI Factory</p>
-      <h1>Help run the <em>AI Factory</em> at Cal Poly</h1>
-      <p class="lede">Cal Poly built an on-campus NVIDIA DGX B200 BasePOD so students and faculty can train and run their own models. <strong>We're hiring the three people who will make it work for them:</strong> a research computing facilitator lead, a systems administrator, and a software engineer.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#roles">See the three roles</a>
-        <a class="btn btn-ghost" href="#apply">How to apply</a>
+    <div class="hero-top">
+      <div class="hero-title">
+        <p class="eyebrow">Cal Poly &middot; NVIDIA DGX B200 AI Factory</p>
+        <h1>Help run the <em>AI Factory</em> at Cal Poly</h1>
+      </div>
+      <div class="hero-copy">
+        <p class="lede">Cal Poly built an on-campus NVIDIA DGX B200 BasePOD so students and faculty can train and run their own models. <strong>We're hiring the three people who will make it work for them:</strong> a research computing facilitator lead, a systems administrator, and a software engineer.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#roles">See the three roles</a>
+          <a class="btn btn-ghost" href="#apply">How to apply</a>
+        </div>
       </div>
     </div>
-    <div class="pod" role="img" aria-label="Diagram of the BasePOD: four DGX B200 nodes with eight GPUs each, 32 GPUs in total">
-      <div class="pod-head"><span><b>DGX B200 BasePOD</b></span><span>San Luis Obispo, CA</span></div>
-      <div class="nodes">
-        <div class="node"><span>node-01</span><div class="gpus"><span></span><span style="animation-delay:.3s"></span><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span></div></div>
-        <div class="node"><span>node-02</span><div class="gpus"><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span></div></div>
-        <div class="node"><span>node-03</span><div class="gpus"><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span></div></div>
-        <div class="node"><span>node-04</span><div class="gpus"><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span><span style="animation-delay:3.6s"></span><span style="animation-delay:3.9s"></span></div></div>
-      </div>
-      <div class="pod-foot">
-        <span><b>32</b> &times; NVIDIA B200 GPUs</span>
-        <span><b>VAST</b> high-performance storage</span>
-        <span><b>Slurm</b> + <b>Kubernetes</b></span>
-        <span><b>Run:ai</b> GPU orchestration</span>
-      </div>
-    </div>
+    <figure class="hero-photo">
+      <img src="ai-factory-racks.jpg" width="1600" height="972" alt="Four racks of the NVIDIA DGX B200 BasePOD in the Cal Poly data center">
+      <figcaption>The AI Factory BasePOD, San Luis Obispo</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -230,11 +251,28 @@ html { scroll-behavior: smooth; }
           <p>Faculty are already using it, and classes and research groups are lining up behind them. The three people we hire will form a new team, Academic and Research Computing, that keeps the platform running and gets it in front of the people who need it.</p>
         </div>
       </div>
-      <div class="facts">
+      <div class="program-extra">
+        <div class="facts">
         <div class="fact"><b>4</b><span>NVIDIA DGX B200 systems in one BasePOD</span></div>
         <div class="fact"><b>32</b><span>B200 GPUs for training, fine-tuning and inference</span></div>
         <div class="fact"><b>$3M</b><span>Noyce School investment in the AI Factory</span></div>
         <div class="fact"><b>3</b><span>open positions on a new team</span></div>
+      </div>
+        <div class="pod" role="img" aria-label="Diagram of the BasePOD: four DGX B200 nodes with eight GPUs each, 32 GPUs in total">
+      <div class="pod-head"><span><b>DGX B200 BasePOD</b></span><span>San Luis Obispo, CA</span></div>
+      <div class="nodes">
+        <div class="node"><span>node-01</span><div class="gpus"><span></span><span style="animation-delay:.3s"></span><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span></div></div>
+        <div class="node"><span>node-02</span><div class="gpus"><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span></div></div>
+        <div class="node"><span>node-03</span><div class="gpus"><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span></div></div>
+        <div class="node"><span>node-04</span><div class="gpus"><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span><span style="animation-delay:3.6s"></span><span style="animation-delay:3.9s"></span></div></div>
+      </div>
+      <div class="pod-foot">
+        <span><b>32</b> &times; NVIDIA B200 GPUs</span>
+        <span><b>VAST</b> high-performance storage</span>
+        <span><b>Slurm</b> + <b>Kubernetes</b></span>
+        <span><b>Run:ai</b> GPU orchestration</span>
+      </div>
+    </div>
       </div>
     </div>
   </section>
