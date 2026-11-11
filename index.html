@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cal Poly AI Factory Careers</title>
+<meta name="description" content="Cal Poly is hiring three people to run the NVIDIA DGX B200 AI Factory: a research computing facilitator lead, a systems administrator and a software engineer.">
+<link rel="canonical" href="https://brianspo.github.io/ai-factory-careers/">
+<meta name="theme-color" content="#154734">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23154734'/%3E%3Crect x='6' y='7' width='4' height='18' fill='%23f2c75c'/%3E%3Crect x='14' y='7' width='4' height='18' fill='%23f2c75c'/%3E%3Crect x='22' y='7' width='4' height='18' fill='%23f2c75c'/%3E%3C/svg%3E">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cal Poly">
+<meta property="og:title" content="Help run the AI Factory at Cal Poly">
+<meta property="og:description" content="Three open positions on a new team running Cal Poly's NVIDIA DGX B200 AI Factory: research computing facilitator lead, systems administrator and software engineer.">
+<meta property="og:url" content="https://brianspo.github.io/ai-factory-careers/">
+<meta property="og:image" content="https://brianspo.github.io/ai-factory-careers/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Help run the AI Factory at Cal Poly. Three open positions. NVIDIA DGX B200, 32 GPUs.">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Help run the AI Factory at Cal Poly">
+<meta name="twitter:description" content="Three open positions on a new team running Cal Poly's NVIDIA DGX B200 AI Factory.">
+<meta name="twitter:image" content="https://brianspo.github.io/ai-factory-careers/og-image.png">
+<meta name="twitter:image:alt" content="Help run the AI Factory at Cal Poly. Three open positions. NVIDIA DGX B200, 32 GPUs.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: one reading column; a dark "machine room" hero with the BasePOD drawn as 4 nodes x 8 GPUs; roles as full, linkable sections. */
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --ink: #4a4a4a;
+  --muted: #54585a;
+  --line: #dcdcd3;
+  --green: #154734;      /* Poly Green */
+  --btn: #154734;
+  --gold: #bd8b13;       /* Mustang Gold: rules and fills only, fails AA as small text */
+  --gold-text: #7a5a0c;  /* gold darkened for small text on light */
+  --gold-soft: #e4e3d3;   /* Mission Beige */
+  --hero-bg: #154734;
+  --hero-ink: #eef3ef;
+  --hero-muted: #b7cdc2;
+  --gpu: #2f6650;
+  --gpu-on: #f2c75c;
+  --display: "Abolition", "Oswald", "DIN Condensed", "Arial Narrow", sans-serif;
+  --body: "Source Sans 3", "Source Sans Pro", "Trebuchet MS", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e3325; --surface: #134030; --ink: #eef3ef; --muted: #b7cdc2; --line: #24503f;
+    --green: #a4d65e; --gold: #f2c75c; --gold-text: #f2c75c; --btn: #f2c75c; --gold-soft: #1b4a39;
+    --hero-bg: #0a2a1e; --hero-ink: #eef3ef; --hero-muted: #b7cdc2; --gpu: #24493a; --gpu-on: #f2c75c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e3325; --surface: #134030; --ink: #eef3ef; --muted: #b7cdc2; --line: #24503f;
+  --green: #a4d65e; --gold: #f2c75c; --gold-text: #f2c75c; --btn: #f2c75c; --gold-soft: #1b4a39;
+  --hero-bg: #0a2a1e; --hero-ink: #eef3ef; --hero-muted: #b7cdc2; --gpu: #24493a; --gpu-on: #f2c75c;
+  color-scheme: dark;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 19px; line-height: 1.6; }
+.wrap { max-width: 1060px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2 { font-family: var(--display); text-transform: uppercase; line-height: 1.02; letter-spacing: 0.02em; text-wrap: balance; margin: 0; }
+h3 { font-family: var(--body); line-height: 1.2; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(2.2rem, 4.4vw, 3.2rem); font-weight: 600; color: var(--green); }
+h3 { font-size: 1.2rem; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--green); text-underline-offset: 3px; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.eyebrow { font-family: var(--body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); }
+.prose { max-width: 65ch; display: grid; gap: 1rem; }
+
+/* Hero */
+.hero { background: var(--hero-bg); color: var(--hero-ink); }
+.hero .wrap { padding-block: clamp(48px, 8vw, 88px); display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+.hero .eyebrow { color: var(--gpu-on); }
+.hero h1 { font-size: clamp(3.2rem, 8vw, 6.5rem); font-weight: 600; color: #fff; letter-spacing: 0.03em; margin-top: 22px; position: relative; }
+.hero h1::before { content: ""; position: absolute; top: -18px; left: 0; width: 72px; height: 3px; background: var(--gold); }
+.hero h1 em { font-style: normal; color: var(--gpu-on); }
+.hero .lede { color: var(--hero-muted); font-size: 1.15rem; margin-top: 20px; max-width: 52ch; }
+.hero .lede strong { color: var(--hero-ink); font-weight: 600; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; font-family: var(--body); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 24px; border-radius: 2px; text-decoration: none; }
+.btn-primary { background: var(--gpu-on); color: #154734; }
+.btn-primary:hover { background: #fff; }
+.btn-solid { background: var(--btn); color: #fff; }
+.btn-solid:hover { background: #3a913f; color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-solid { color: #154734; } }
+:root[data-theme="dark"] .btn-solid { color: #154734; }
+.btn-ghost { color: var(--hero-ink); border: 1px solid #7fa896; }
+.btn-ghost:hover { border-color: var(--gpu-on); }
+
+/* BasePOD diagram */
+.pod { min-width: 0; border: 1px solid #3f7a63; border-radius: 2px; padding: 20px; font-family: var(--mono); font-size: 0.75rem; color: var(--hero-muted); }
+.pod-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.pod-head b { color: var(--hero-ink); font-weight: 600; }
+.nodes { display: grid; gap: 10px; }
+.node { display: grid; grid-template-columns: 4.5em 1fr; align-items: center; gap: 10px; }
+.gpus { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; }
+.gpus span { aspect-ratio: 1 / 1.35; max-width: 100%; background: var(--gpu); border-radius: 2px; animation: pulse 4.8s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { background: var(--gpu); } 50% { background: var(--gpu-on); } }
+@media (prefers-reduced-motion: reduce) { .gpus span { animation: none; background: var(--gpu-on); opacity: .85; } }
+.pod-foot { margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; border-top: 1px dashed #3f7a63; padding-top: 12px; }
+.pod-foot span b { color: var(--hero-ink); font-weight: 600; }
+
+/* Sections */
+section.block .wrap { padding-block: clamp(48px, 7vw, 80px); }
+section.block + section.block .wrap { border-top: 1px solid var(--line); }
+.split { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(24px, 5vw, 64px); }
+.split > * { min-width: 0; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; border-top: 3px solid var(--gold); }
+.fact { padding: 16px 16px 0 0; display: grid; gap: 4px; align-content: start; }
+.fact b { font-family: var(--display); font-size: 2.8rem; font-weight: 600; color: var(--green); font-variant-numeric: tabular-nums; line-height: 1; }
+.fact span { color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
+
+/* Team structure */
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.team a { display: grid; gap: 8px; align-content: start; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 2px; text-decoration: none; color: var(--ink); }
+.team a:hover { border-color: var(--green); }
+.team .tag { font-family: var(--body); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.team h3 { color: var(--green); }
+.team p { font-size: 0.98rem; color: var(--muted); line-height: 1.45; }
+
+/* Roles */
+.role { scroll-margin-top: 24px; }
+.role-head { display: grid; gap: 10px; max-width: 65ch; }
+.role-head .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.chip { font-family: var(--body); font-weight: 600; font-size: 0.8rem; padding: 4px 10px; border-radius: 999px; background: var(--gold-soft); color: var(--ink); }
+.role-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; margin-top: 32px; }
+.role-body > div { min-width: 0; }
+.role-body h4 { font-family: var(--body); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); margin: 0 0 10px; font-weight: 600; }
+.role-body ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.role-body li { padding-left: 2px; }
+.stack { margin-top: 28px; font-family: var(--body); font-size: 0.82rem; color: var(--muted); line-height: 1.7; border-left: 3px solid var(--line); padding-left: 14px; }
+.stack b { color: var(--ink); font-weight: 600; }
+
+/* Apply */
+.apply { background: var(--surface); border-top: 1px solid var(--line); }
+.apply-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.apply-links .btn { display: grid; gap: 6px; text-transform: none; letter-spacing: 0; font-size: 1.05rem; line-height: 1.25; padding: 18px 20px; }
+.apply-links .btn small { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: .9; }
+.role-apply { margin-top: 28px; }
+@media (max-width: 860px) { .apply-links { grid-template-columns: 1fr; } }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 28px; counter-reset: s; }
+.steps li { list-style: none; display: grid; gap: 6px; counter-increment: s; }
+.steps li::before { content: counter(s); font-family: var(--display); font-weight: 600; font-size: 2.2rem; color: var(--gold); }
+.steps ol { padding: 0; margin: 0; }
+.note { margin-top: 32px; font-size: 0.95rem; color: var(--muted); max-width: 70ch; }
+footer .wrap { padding-block: 32px; font-size: 0.88rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .split, .role-body { grid-template-columns: 1fr; }
+  .team, .steps { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  body { font-size: 17px; }
+  .pod-foot { grid-template-columns: 1fr; }
+  .node { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* Cal Poly bar + site bar (after noyce.calpoly.edu) */
+.topbar { background: linear-gradient(90deg, #154734 0%, #1f6a4d 100%); }
+.topbar .wrap { padding-block: 14px; display: flex; align-items: center; }
+.topbar img { display: block; height: 30px; width: auto; }
+.sitebar { background: #f8f8f7; border-bottom: 1px solid var(--line); }
+.sitebar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 12px; }
+.sitebar .sitename { font-family: "Utopia Std Subhead", Utopia, Georgia, serif; font-size: 1.15rem; color: #154734; text-decoration: none; }
+.sitebar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.sitebar nav a { font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: #154734; text-decoration: none; padding-block: 4px; }
+.sitebar nav a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sitebar { background: #134030; } :root:not([data-theme="light"]) .sitebar .sitename, :root:not([data-theme="light"]) .sitebar nav a { color: #eef3ef; } }
+:root[data-theme="dark"] .sitebar { background: #134030; } :root[data-theme="dark"] .sitebar .sitename, :root[data-theme="dark"] .sitebar nav a { color: #eef3ef; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="https://www.calpoly.edu/" aria-label="Cal Poly home"><img src="cal-poly-logo-white.png" alt="Cal Poly" width="117" height="30"></a></div></div>
+<div class="sitebar"><div class="wrap"><a class="sitename" href="#top">AI Factory Careers</a><nav aria-label="Page sections"><a href="#program">Program</a><a href="#roles">Roles</a><a href="#why">Why Cal Poly</a><a href="#apply">Apply</a></nav></div></div>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Cal Poly &middot; NVIDIA DGX B200 AI Factory</p>
+      <h1>Help run the <em>AI Factory</em> at Cal Poly</h1>
+      <p class="lede">Cal Poly built an on-campus NVIDIA DGX B200 BasePOD so students and faculty can train and run their own models. <strong>We're hiring the three people who will make it work for them:</strong> a research computing facilitator lead, a systems administrator, and a software engineer.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#roles">See the three roles</a>
+        <a class="btn btn-ghost" href="#apply">How to apply</a>
+      </div>
+    </div>
+    <div class="pod" role="img" aria-label="Diagram of the BasePOD: four DGX B200 nodes with eight GPUs each, 32 GPUs in total">
+      <div class="pod-head"><span><b>DGX B200 BasePOD</b></span><span>San Luis Obispo, CA</span></div>
+      <div class="nodes">
+        <div class="node"><span>node-01</span><div class="gpus"><span></span><span style="animation-delay:.3s"></span><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span></div></div>
+        <div class="node"><span>node-02</span><div class="gpus"><span style="animation-delay:.6s"></span><span style="animation-delay:.9s"></span><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span></div></div>
+        <div class="node"><span>node-03</span><div class="gpus"><span style="animation-delay:1.2s"></span><span style="animation-delay:1.5s"></span><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span></div></div>
+        <div class="node"><span>node-04</span><div class="gpus"><span style="animation-delay:1.8s"></span><span style="animation-delay:2.1s"></span><span style="animation-delay:2.4s"></span><span style="animation-delay:2.7s"></span><span style="animation-delay:3s"></span><span style="animation-delay:3.3s"></span><span style="animation-delay:3.6s"></span><span style="animation-delay:3.9s"></span></div></div>
+      </div>
+      <div class="pod-foot">
+        <span><b>32</b> &times; NVIDIA B200 GPUs</span>
+        <span><b>VAST</b> high-performance storage</span>
+        <span><b>Slurm</b> + <b>Kubernetes</b></span>
+        <span><b>Run:ai</b> GPU orchestration</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block" id="program">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">The program</p>
+          <h2 style="margin-top:10px">Campus-owned AI compute, built for Learn by Doing</h2>
+        </div>
+        <div class="prose">
+          <p>In November 2025, Cal Poly announced the AI Factory: a $3 million investment by the Noyce School of Applied Computing in four NVIDIA DGX B200 systems, high-performance storage and networking, and the NVIDIA AI software stack. The Noyce School, created by a $60 million gift from the Robert N. Noyce Trust, brings together Computer Science and Software Engineering, Electrical Engineering and Computer Engineering in the College of Engineering, with Statistics as an affiliate.</p>
+          <p>The system lets students and faculty build and train models on campus instead of renting cloud GPUs by the hour. Cal Poly keeps full ownership of the data, models and applications built on it. Early work includes agriculture research, energy and transportation, environmental monitoring and large-scale image and video analysis, and regional partners on the Central Coast can use it by working with Cal Poly faculty and students.</p>
+          <p>Faculty are already using it, and classes and research groups are lining up behind them. These three positions form a new Academic and Research Computing team that keeps the platform running and puts it in front of the people who need it.</p>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>4</b><span>NVIDIA DGX B200 systems in one BasePOD</span></div>
+        <div class="fact"><b>32</b><span>B200 GPUs for training, fine-tuning and inference</span></div>
+        <div class="fact"><b>$3M</b><span>Noyce School investment in the AI Factory</span></div>
+        <div class="fact"><b>3</b><span>open positions on a new team</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="roles">
+    <div class="wrap">
+      <p class="eyebrow">The team</p>
+      <h2 style="margin-top:10px">Three roles, one small team</h2>
+      <p class="prose" style="margin-top:16px">Each role covers a different layer. The facilitator is the front door for faculty and students, the systems administrator owns the platform, and the software engineer builds the workflows that run on it. All three work closely with Noyce School faculty and with Cal Poly's existing systems and software engineering teams, so nobody is working alone.</p>
+      <div class="team">
+        <a href="#facilitator"><span class="tag">People &amp; strategy</span><h3>Research Computing Facilitator Lead</h3><p>Helps researchers pick the right resource, teaches, and leads the team's day-to-day work.</p></a>
+        <a href="#sysadmin"><span class="tag">Platform</span><h3>Academic and Research Systems Administrator</h3><p>Runs the BasePOD, storage, schedulers and the AWS side of research computing.</p></a>
+        <a href="#engineer"><span class="tag">Software</span><h3>Software Engineer, AI Systems and GPU Workloads</h3><p>Builds training, fine-tuning and inference workflows that make the GPUs useful.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block role" id="facilitator">
+    <div class="wrap">
+      <div class="role-head">
+        <p class="eyebrow">Role 1 of 3</p>
+        <h2>Research Computing Facilitator Lead</h2>
+        <div class="meta"><span class="chip">Leads the new team</span><span class="chip">Faculty-facing</span></div>
+        <p>You'll be the person faculty, researchers and students talk to first. You'll learn what their research needs, then point them to the right tool: the AI Factory, AWS, the National Research Platform or NSF ACCESS. About a quarter of the job is leading the team: setting priorities, handling escalations and keeping the service reliable.</p>
+      </div>
+      <div class="role-body">
+        <div>
+          <h4>What you'll do</h4>
+          <ul>
+            <li>Promote HPC, cloud and national research computing resources across campus</li>
+            <li>Consult with researchers on computational needs and recommend solutions</li>
+            <li>Teach the Linux command line, job submission, data management and reproducible workflows</li>
+            <li>Connect Cal Poly with NSF ACCESS, CaRCC, CASC and Internet2 communities</li>
+            <li>Analyze usage and evaluate new platforms to shape campus strategy</li>
+            <li>Lead the team's work planning, incident escalation and process improvement</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What you bring</h4>
+          <ul>
+            <li>Bachelor's degree (computer science preferred) and 4 years of relevant experience; an advanced degree can substitute year for year</li>
+            <li>Your own research or scholarly work using computational systems</li>
+            <li>Knowledge of HPC, GPU and AI workloads, AWS, parallel storage and national programs</li>
+            <li>Comfort with Linux, Slurm, containers (Kubernetes, Docker, Apptainer)</li>
+            <li>The ability to explain complex topics to non-specialists and to lead others</li>
+          </ul>
+          <h4 style="margin-top:20px">Nice to have</h4>
+          <ul>
+            <li>Master's or PhD in a computationally enabled discipline</li>
+            <li>Carpentries instructor certification or workshop and bootcamp experience</li>
+            <li>Experience supporting non-traditional users in the life sciences, social sciences or humanities</li>
+          </ul>
+        </div>
+      </div>
+      <p class="stack"><b>Tools you'll see:</b> Open OnDemand, JupyterHub, RStudio Server, Globus, Snakemake, Nextflow, Conda, Apptainer, Git, DMPTool</p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+    </div>
+  </section>
+
+  <section class="block role" id="sysadmin">
+    <div class="wrap">
+      <div class="role-head">
+        <p class="eyebrow">Role 2 of 3</p>
+        <h2>Academic and Research Systems Administrator</h2>
+        <div class="meta"><span class="chip">On-prem + AWS</span><span class="chip">Platform owner</span></div>
+        <p>You'll own day-to-day technical operations of the AI Factory and the wider research and instructional Linux environment, on campus and in AWS. That means design, deployment, security and the steady work of keeping a shared GPU platform healthy as more people use it.</p>
+      </div>
+      <div class="role-body">
+        <div>
+          <h4>What you'll do</h4>
+          <ul>
+            <li>Administer the DGX B200 BasePOD: compute, GPUs, high-speed network and VAST storage</li>
+            <li>Run GPU-enabled Kubernetes (GPU Operator, MIG, time-slicing) and Slurm scheduling</li>
+            <li>Build and operate hybrid research computing in AWS with cost and security controls</li>
+            <li>Automate with Ansible and Terraform; build monitoring with Prometheus and Grafana</li>
+            <li>Apply CSU and Cal Poly security policy, SSO and MFA integration</li>
+            <li>Mentor student employees and represent Cal Poly in CSU and national forums</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What you bring</h4>
+          <ul>
+            <li>Bachelor's degree in a computing field (or equivalent) and 5 years of progressive Linux administration</li>
+            <li>Production Kubernetes experience, including GPU scheduling and multi-tenant operations</li>
+            <li>Production AWS experience (IAM, VPC, EKS, ParallelCluster, FSx or equivalents)</li>
+            <li>The NVIDIA GPU stack (CUDA, NCCL, drivers) and InfiniBand or RoCE networking</li>
+            <li>Infrastructure as code, Python and Bash, Git-based CI/CD</li>
+          </ul>
+          <h4 style="margin-top:20px">Nice to have</h4>
+          <ul>
+            <li>Hands-on DGX, BasePOD or SuperPOD and Run:ai experience</li>
+            <li>Higher-ed research computing, NSF ACCESS, NIST 800-171 or CUI work</li>
+            <li>NVIDIA, AWS, CKA/CKS or RHCE certifications</li>
+          </ul>
+        </div>
+      </div>
+      <p class="stack"><b>Tools you'll see:</b> RHEL, Rocky, Ubuntu, Slurm, Kubernetes, Helm, Run:ai, JupyterHub, VAST Data, AWS, Ansible, Terraform, Prometheus, Grafana, Loki</p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+    </div>
+  </section>
+
+  <section class="block role" id="engineer">
+    <div class="wrap">
+      <div class="role-head">
+        <p class="eyebrow">Role 3 of 3</p>
+        <h2>Software Engineer, AI Systems and GPU Workloads</h2>
+        <div class="meta"><span class="chip">Software first</span><span class="chip">Multi-GPU</span></div>
+        <p>This is a software role, not an infrastructure role. You'll write the tools and workflows that let faculty and students train, fine-tune and deploy models across many GPUs, and you'll help them make their own code faster and more reproducible.</p>
+      </div>
+      <div class="role-body">
+        <div>
+          <h4>What you'll do</h4>
+          <ul>
+            <li>Build and optimize workflows for training and deploying LLMs and other models on multi-GPU systems</li>
+            <li>Create automation for job orchestration, scheduling and utilization monitoring</li>
+            <li>Profile and tune distributed training with NCCL, CUDA, PyTorch and TensorFlow</li>
+            <li>Turn research requirements into reproducible, efficient software</li>
+            <li>Run consultations and training workshops on AI systems and good engineering practice</li>
+            <li>Validate software environments and do first-line troubleshooting with the sysadmin</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What you bring</h4>
+          <ul>
+            <li>Bachelor's degree in a computing field and 4 years of software development including GPU-accelerated applications (or an equivalent combination)</li>
+            <li>Advanced Python plus C++ or CUDA</li>
+            <li>Distributed and multi-GPU computing and performance optimization</li>
+            <li>PyTorch, TensorFlow or JAX</li>
+            <li>Docker, Kubernetes, Slurm or Ray</li>
+          </ul>
+          <h4 style="margin-top:20px">Nice to have</h4>
+          <ul>
+            <li>Master's or PhD in a relevant field</li>
+            <li>Experience supporting academic research</li>
+            <li>Experiment tracking, CI/CD and infrastructure as code; mentoring students or junior engineers</li>
+          </ul>
+        </div>
+      </div>
+      <p class="stack"><b>Tools you'll see:</b> PyTorch, CUDA, NCCL, Ray, Slurm, Kubernetes, Docker, NVIDIA AI Enterprise containers, vLLM</p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+    </div>
+  </section>
+
+  <section class="block" id="why">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Why Cal Poly</p>
+          <h2 style="margin-top:10px">A new platform and a team you get to shape</h2>
+        </div>
+        <div class="prose">
+          <p>Most research computing jobs inherit a cluster and a backlog. This one starts with current-generation hardware, faculty who already want to use it, and a team that doesn't exist yet. The first people hired will decide how the service works: how researchers get access, how classes share GPUs, what the documentation looks like and what we build next.</p>
+          <p>You'll also work with students. Cal Poly's Learn by Doing approach means student employees and student researchers are part of the work, and all three roles include mentoring them.</p>
+          <p>And you'll do it in San Luis Obispo, on California's Central Coast, at a university where the system's energy use is tracked against a campus solar farm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="apply" id="apply">
+  <div class="wrap" style="padding-block: clamp(48px, 7vw, 80px);">
+    <p class="eyebrow">How to apply</p>
+    <h2 style="margin-top:10px">Applications are open now</h2>
+    <ol class="steps">
+      <li><h3>Pick a role</h3><p>Each role has its own posting on the Cal Poly jobs site, with the salary range, full duties and closing date.</p></li>
+      <li><h3>Apply to what fits</h3><p>You can apply to more than one role. If two fit you, apply to both.</p></li>
+      <li><h3>Interview</h3><p>First-round interviews are on Zoom. Finalists visit campus in San Luis Obispo.</p></li>
+    </ol>
+    <div class="apply-links">
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener"><span>Research Computing Facilitator Lead</span><small>View posting &rarr;</small></a>
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener"><span>Academic and Research Systems Administrator</span><small>View posting &rarr;</small></a>
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener"><span>Software Engineer, AI Systems and GPU Workloads</span><small>View posting &rarr;</small></a>
+    </div>
+    <p class="note">Questions about the program? Reach out to Brian Spolarich, AVP and CTO of Cal Poly Information Technology Services, on LinkedIn. The official job postings are the authoritative source for duties, qualifications, salary and deadlines.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Cal Poly &middot; Noyce School of Applied Computing</span>
+    <span>Cal Poly is an Equal Opportunity employer.</span>
+  </div>
+</footer>
+</body>
+</html>
