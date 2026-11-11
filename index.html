@@ -137,7 +137,7 @@ section.block + section.block .wrap { border-top: 1px solid var(--line); }
 .chip { font-family: var(--body); font-weight: 600; font-size: 0.8rem; padding: 4px 10px; border-radius: 999px; background: var(--gold-soft); color: var(--ink); }
 .role-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; margin-top: 32px; }
 .role-body > div { min-width: 0; }
-.role-body h4 { font-family: var(--body); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); margin: 0 0 10px; font-weight: 600; }
+.role-body h3 { font-family: var(--body); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); margin: 0 0 10px; font-weight: 600; }
 .role-body ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
 .role-body li { padding-left: 2px; }
 .stack { margin-top: 28px; font-family: var(--body); font-size: 0.82rem; color: var(--muted); line-height: 1.7; border-left: 3px solid var(--line); padding-left: 14px; }
@@ -210,12 +210,21 @@ html { scroll-behavior: smooth; }
 .hero-copy .cta-row { margin-top: 0; }
 .hero-photo img { aspect-ratio: auto; object-fit: fill; }
 @media (max-width: 860px) { .hero-copy { grid-template-columns: 1fr; } .hero-photo img { aspect-ratio: auto; } }
+
+/* Accessibility */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: 16px; top: -64px; z-index: 10; background: #f2c75c; color: #154734; font-weight: 700; padding: 10px 16px; border-radius: 2px; text-decoration: none; }
+.skip-link:focus { top: 8px; }
+main:focus { outline: none; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
 <div class="topbar"><div class="wrap"><a href="https://www.calpoly.edu/" aria-label="Cal Poly home"><img src="cal-poly-logo-white.png" alt="Cal Poly" width="117" height="30"></a></div></div>
 <div class="sitebar"><div class="wrap"><a class="sitename" href="#top">AI Factory Careers</a><nav aria-label="Page sections"><a href="#program">Program</a><a href="#roles">Roles</a><a href="#why">Why Cal Poly</a><a href="#apply">Apply</a></nav></div></div>
-<header class="hero" id="top">
+</header>
+<section class="hero" id="top" aria-label="Introduction">
   <div class="wrap">
     <div class="hero-top">
       <div class="hero-title">
@@ -235,9 +244,9 @@ html { scroll-behavior: smooth; }
       <figcaption>The AI Factory BasePOD, San Luis Obispo</figcaption>
     </figure>
   </div>
-</header>
+</section>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="block" id="program">
     <div class="wrap">
       <div class="split">
@@ -300,7 +309,7 @@ html { scroll-behavior: smooth; }
       </div>
       <div class="role-body">
         <div>
-          <h4>What you'll do</h4>
+          <h3>What you'll do</h3>
           <ul>
             <li>Promote HPC, cloud and national research computing resources across campus</li>
             <li>Consult with researchers on computational needs and recommend solutions</li>
@@ -311,7 +320,7 @@ html { scroll-behavior: smooth; }
           </ul>
         </div>
         <div>
-          <h4>What you bring</h4>
+          <h3>What you bring</h3>
           <ul>
             <li>Bachelor's degree (computer science preferred) and 4 years of relevant experience; an advanced degree can substitute year for year</li>
             <li>Your own research or scholarly work using computational systems</li>
@@ -319,16 +328,16 @@ html { scroll-behavior: smooth; }
             <li>Comfort with Linux, Slurm, containers (Kubernetes, Docker, Apptainer)</li>
             <li>The ability to explain complex topics to non-specialists and to lead others</li>
           </ul>
-          <h4 style="margin-top:20px">Nice to have</h4>
+          <h3 style="margin-top:20px">Nice to have</h3>
           <ul>
             <li>Master's or PhD in a computationally enabled discipline</li>
-            <li><a href="https://carpentries.org/" target="_blank" rel="noopener">Carpentries</a> instructor certification or workshop and bootcamp experience</li>
+            <li><a href="https://carpentries.org/" target="_blank" rel="noopener">Carpentries<span class="sr-only"> (opens in a new tab)</span></a> instructor certification or workshop and bootcamp experience</li>
             <li>Experience helping researchers who are new to computing, in fields like the life sciences, social sciences or humanities</li>
           </ul>
         </div>
       </div>
       <p class="stack"><b>Tools you'll see:</b> Open OnDemand, JupyterHub, RStudio Server, Globus, Snakemake, Nextflow, Conda, Apptainer, Git, DMPTool</p>
-      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener">Apply for this role<span class="sr-only"> (opens in a new tab)</span></a></p>
     </div>
   </section>
 
@@ -342,7 +351,7 @@ html { scroll-behavior: smooth; }
       </div>
       <div class="role-body">
         <div>
-          <h4>What you'll do</h4>
+          <h3>What you'll do</h3>
           <ul>
             <li>Administer the DGX B200 BasePOD: compute, GPUs, high-speed network and VAST storage</li>
             <li>Run GPU-enabled Kubernetes (GPU Operator, MIG, time-slicing) and Slurm scheduling</li>
@@ -353,7 +362,7 @@ html { scroll-behavior: smooth; }
           </ul>
         </div>
         <div>
-          <h4>What you bring</h4>
+          <h3>What you bring</h3>
           <ul>
             <li>Bachelor's degree in a computing field (or equivalent) and 5 years of progressive Linux administration</li>
             <li>Production Kubernetes experience, including GPU scheduling and multi-tenant operations</li>
@@ -361,7 +370,7 @@ html { scroll-behavior: smooth; }
             <li>Infrastructure as code, Python and Bash, Git-based CI/CD</li>
             <li>Production AWS experience (IAM, VPC, EKS, ParallelCluster, FSx or equivalents)</li>
           </ul>
-          <h4 style="margin-top:20px">Nice to have</h4>
+          <h3 style="margin-top:20px">Nice to have</h3>
           <ul>
             <li>Hands-on DGX, BasePOD or SuperPOD and Run:ai experience</li>
             <li>Higher-ed research computing, NSF ACCESS, NIST 800-171 or CUI work</li>
@@ -370,7 +379,7 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
       <p class="stack"><b>Tools you'll see:</b> RHEL, Rocky, Ubuntu, Slurm, Kubernetes, Helm, Run:ai, JupyterHub, VAST Data, Ansible, Terraform, Prometheus, Grafana, Loki, AWS</p>
-      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener">Apply for this role<span class="sr-only"> (opens in a new tab)</span></a></p>
     </div>
   </section>
 
@@ -384,7 +393,7 @@ html { scroll-behavior: smooth; }
       </div>
       <div class="role-body">
         <div>
-          <h4>What you'll do</h4>
+          <h3>What you'll do</h3>
           <ul>
             <li>Build and optimize workflows for training and deploying LLMs and other models on multi-GPU systems</li>
             <li>Create automation for job orchestration, scheduling and utilization monitoring</li>
@@ -395,7 +404,7 @@ html { scroll-behavior: smooth; }
           </ul>
         </div>
         <div>
-          <h4>What you bring</h4>
+          <h3>What you bring</h3>
           <ul>
             <li>Bachelor's degree in a computing field and 4 years of software development including GPU-accelerated applications (or an equivalent combination)</li>
             <li>Advanced Python plus C++ or CUDA</li>
@@ -403,7 +412,7 @@ html { scroll-behavior: smooth; }
             <li>PyTorch, TensorFlow or JAX</li>
             <li>Docker, Kubernetes, Slurm or Ray</li>
           </ul>
-          <h4 style="margin-top:20px">Nice to have</h4>
+          <h3 style="margin-top:20px">Nice to have</h3>
           <ul>
             <li>Master's or PhD in a relevant field</li>
             <li>Experience supporting academic research</li>
@@ -412,7 +421,7 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
       <p class="stack"><b>Tools you'll see:</b> PyTorch, CUDA, NCCL, Ray, Slurm, Kubernetes, Docker, NVIDIA AI Enterprise containers, vLLM</p>
-      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener">Apply for this role</a></p>
+      <p class="role-apply"><a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener">Apply for this role<span class="sr-only"> (opens in a new tab)</span></a></p>
     </div>
   </section>
 
@@ -431,7 +440,6 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
   </section>
-</main>
 
 <section class="apply" id="apply">
   <div class="wrap" style="padding-block: clamp(48px, 7vw, 80px);">
@@ -443,13 +451,15 @@ html { scroll-behavior: smooth; }
       <li><h3>Interview</h3><p>First-round interviews are on Zoom. Finalists visit campus in San Luis Obispo.</p></li>
     </ol>
     <div class="apply-links">
-      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener"><span>Research Computing Facilitator Lead</span><small>View posting &rarr;</small></a>
-      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener"><span>Academic and Research Systems Administrator</span><small>View posting &rarr;</small></a>
-      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener"><span>Software Engineer, AI Systems and GPU Workloads</span><small>View posting &rarr;</small></a>
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560458/research-computing-facilitator-lead-information-technology-services" target="_blank" rel="noopener"><span>Research Computing Facilitator Lead</span><small>View posting &rarr;</small><span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560459/academic-and-research-systems-administrator-information-technology-services" target="_blank" rel="noopener"><span>Academic and Research Systems Administrator</span><small>View posting &rarr;</small><span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-solid" href="https://jobs.calpoly.edu/en-us/job/560460/software-engineer-ai-systems-and-gpu-workloads-information-technology-services" target="_blank" rel="noopener"><span>Software Engineer, AI Systems and GPU Workloads</span><small>View posting &rarr;</small><span class="sr-only"> (opens in a new tab)</span></a>
     </div>
-    <p class="note">Questions about the program? Reach out to <a href="https://www.linkedin.com/in/briansp/" target="_blank" rel="noopener">Brian Spolarich</a>, AVP and CTO of Cal Poly Information Technology Services, on LinkedIn. The official job postings are the authoritative source for duties, qualifications, salary and deadlines.</p>
+    <p class="note">Questions about the program? Reach out to <a href="https://www.linkedin.com/in/briansp/" target="_blank" rel="noopener">Brian Spolarich<span class="sr-only"> (opens in a new tab)</span></a>, AVP and CTO of Cal Poly Information Technology Services, on LinkedIn. The official job postings are the authoritative source for duties, qualifications, salary and deadlines.</p>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
